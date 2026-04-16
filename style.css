@@ -87,7 +87,9 @@ img {
   background-color: var(--blue-600);
   border: var(--border-w) solid var(--ink);
   box-shadow: var(--shadow-offset-sm) var(--shadow-offset-sm) 0 var(--blue-600);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .card:hover .card__avatar img {
@@ -134,7 +136,7 @@ img {
 
 .card__name {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.6rem);
   line-height: 1.05;
   letter-spacing: -0.01em;
@@ -214,7 +216,9 @@ img {
   border: var(--border-w) solid var(--ink);
   box-shadow: var(--shadow-offset-sm) var(--shadow-offset-sm) 0 var(--ink);
   text-decoration: none;
-  transition: transform 120ms ease, box-shadow 120ms ease,
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
     background-color 120ms ease;
 }
 
@@ -246,7 +250,9 @@ img {
   background-color: var(--surface-alt);
   border: var(--border-w) solid var(--ink);
   box-shadow: var(--shadow-offset-sm) var(--shadow-offset-sm) 0 var(--blue-600);
-  transition: transform 140ms ease, box-shadow 140ms ease;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease;
 }
 
 .list-block:hover {
@@ -338,4 +344,3 @@ img {
     transform: none;
   }
 }
-

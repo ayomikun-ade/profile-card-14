@@ -3,10 +3,133 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An accessible, responsive profile card built with semantic HTML, CSS, and vanilla JavaScript."
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Profile Card</title>
   </head>
   <body>
-    <script src="./script.js"></script>
+    <main class="page">
+      <article
+        class="card"
+        data-testid="test-profile-card"
+        aria-labelledby="profile-name"
+      >
+        <figure class="card__avatar">
+          <img
+            src="https://placehold.co/400x400/2563eb/fefefe?text=AVATAR&font=space-grotesk"
+            alt="Placeholder portrait of the profile owner"
+            data-testid="test-user-avatar"
+            width="400"
+            height="400"
+          />
+          <figcaption class="card__avatar-caption">Profile photo</figcaption>
+        </figure>
+
+        <div class="card__body">
+          <header class="card__header">
+            <p class="card__eyebrow">Profile Card</p>
+            <h2
+              id="profile-name"
+              class="card__name"
+              data-testid="test-user-name"
+            >
+              Jane Placeholder
+            </h2>
+          </header>
+
+          <p class="card__bio" data-testid="test-user-bio">
+            Curious builder who enjoys shipping small, accessible web things.
+            Trades caffeine for clean semantics and keyboard-friendly UIs.
+          </p>
+
+          <div class="card__meta">
+            <span class="card__meta-label">Epoch (ms)</span>
+            <time
+              class="card__time"
+              data-testid="test-user-time"
+              aria-live="polite"
+              aria-atomic="true"
+              >0</time
+            >
+          </div>
+
+          <nav class="card__social" aria-label="Social links">
+            <ul class="card__social-list" data-testid="test-user-social-links">
+              <li>
+                <a
+                  class="chip"
+                  href="https://twitter.com/placeholder"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-twitter"
+                  aria-label="Twitter profile (opens in new tab)"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  class="chip"
+                  href="https://github.com/placeholder"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-github"
+                  aria-label="GitHub profile (opens in new tab)"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  class="chip"
+                  href="https://www.linkedin.com/in/placeholder"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-linkedin"
+                  aria-label="LinkedIn profile (opens in new tab)"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  class="chip"
+                  href="https://instagram.com/placeholder"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-instagram"
+                  aria-label="Instagram profile (opens in new tab)"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div class="card__lists">
+            <section class="list-block" aria-labelledby="hobbies-heading">
+              <h3 id="hobbies-heading" class="list-block__title">Hobbies</h3>
+              <ul class="list-block__items" data-testid="test-user-hobbies">
+                <li>Reading sci-fi novels</li>
+                <li>Trail running</li>
+                <li>Building side projects</li>
+                <li>Board games</li>
+              </ul>
+            </section>
+
+            <section class="list-block" aria-labelledby="dislikes-heading">
+              <h3 id="dislikes-heading" class="list-block__title">Dislikes</h3>
+              <ul class="list-block__items" data-testid="test-user-dislikes">
+                <li>Flaky tests</li>
+                <li>Autoplaying video</li>
+                <li>Tiny tap targets</li>
+                <li>Unlabeled buttons</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
